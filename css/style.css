@@ -20,7 +20,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20%;
+  height: 100vh;
 }
 
 
@@ -65,7 +65,12 @@ main {
   text-decoration: none;
 }
 
-.options a:hover {
+.options {
+  display:none;
+}
+
+.options.active {
+  display: absolute;
   background-color: var(--white);
   color: var(--black);
 }
