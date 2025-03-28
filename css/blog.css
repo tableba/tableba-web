@@ -10,14 +10,19 @@ main {
   flex-direction: column;
 }
 
+#blog_container {
+  width: 100%;
+}
+
 .blog_card {
+  display:flex;
+  width: 70%;
   margin: 10px;
   padding: 10px;
-  display:flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  width: 70%;
 }
 
 .blog_card:hover {
