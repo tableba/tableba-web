@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const BLOG_POSTS = await fetchData("https://raw.githubusercontent.com/tableba/tableba_web/refs/heads/main/blog_posts.json?token=GHSAT0AAAAAAC6VJNYOFJF42IMHFQMQF3H2Z7F7X7Q")
+  const BLOG_POSTS = await fetchData("https://tableba.com/blog_posts.json")
+  console.log(BLOG_POSTS)
   renderBlogPostCovers(BLOG_POSTS)
 })
 
