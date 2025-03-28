@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blog_card {
+  margin: 10px;
+  padding: 10px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+}
+
+.blog_card:hover {
+  background-color: rgb(200, 200, 200);
+
+}
