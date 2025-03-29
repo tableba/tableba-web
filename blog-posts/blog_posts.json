@@ -1,0 +1,11 @@
+[
+  {
+    "id": 0,
+    "title": "",
+    "description": "",
+    "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>eduroam</title>\n  </head>\n  <body>\n    <div id=\"buttons\"></div>\n    <h1>How to connect eduroam to arch linux</h1>\n  \n    <script src=\"./blog_posts.js\"></script>\n  </body>\n</html>\n",
+    "author": "Antoine Geiger",
+    "createdOn": "2025-03-29T13:12:13.780Z",
+    "lastModified": "2025-03-29T13:12:13.780Z"
+  }
+]
