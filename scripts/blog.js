@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const BLOG_POSTS = await fetchData("https://tableba.com/blog-posts/blog_posts.json")
-  console.log(BLOG_POSTS)
-  // renderBlogPostCovers(BLOG_POSTS)
+  renderBlogPostCovers(BLOG_POSTS)
 })
 
 function renderBlogPostCovers(blogPosts) {
@@ -18,10 +17,15 @@ function renderBlogPostCovers(blogPosts) {
     blogCard.appendChild(title)
 
     const content = document.createElement("p")
-    content.innerText = post.content
+    content.innerText = post.description
     blogCard.appendChild(content)
 
     frag.appendChild(blogCard)
+
+    //listen for a click on the blog card
+    blogCard.addEventListener('click', () => {
+
+    })
   })
 
   blogContainer.appendChild(frag)

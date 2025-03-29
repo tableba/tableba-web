@@ -3,10 +3,11 @@ import path from "path"
 
 async function main() {
   try {
+    const DNS_NAME = "https://tableba.com"
     const HTML_DIR = "./blog-posts/html-blog-files"
     const OUTPUT_FILE = "./blog-posts/blog_posts.json"
 
-    const htmlJsonContent = await htmlToJson(HTML_DIR)
+    const htmlJsonContent = await htmlToJson(HTML_DIR, DNS_NAME)
     await fs.writeFile(OUTPUT_FILE, JSON.stringify(htmlJsonContent, null, 2), 'utf8');
     console.log(`HTML file contents from ${HTML_DIR} written to ${OUTPUT_FILE} successfully.`)
   } catch (err) {
@@ -14,13 +15,14 @@ async function main() {
   }
 }
 
-async function htmlToJson(htmlDir) {
+async function htmlToJson(htmlDir, dns) {
   let htmlContents = []
   try {
     const htmlFiles = await fs.readdir(htmlDir)
     // reading content of each file
     for (let index in htmlFiles) {
       const filePath = path.join(htmlDir, htmlFiles[index])
+      const url = path.join(dns, filePath).replace("https:/", "https://")
       const content = await fs.readFile(filePath, 'utf-8')
       const stats = await fs.stat(filePath)
       htmlContents.push({
@@ -29,6 +31,7 @@ async function htmlToJson(htmlDir) {
         "description": "",
         "content": content,
         "author": "Antoine Geiger",
+        "url": url,
         "createdOn": stats.birthtime,
         "lastModified": stats.mtime
       })
