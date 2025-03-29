@@ -5,7 +5,7 @@ import { JSDOM } from "jsdom"
 async function main() {
   try {
     const DNS_NAME = "https://tableba.com"
-    const HTML_DIR = "./blog-posts/html-blog-files"
+    const HTML_DIR = "./blog-posts/blog-files"
     const OUTPUT_FILE = "./blog-posts/blog_posts.json"
 
     const htmlJsonContent = await htmlToJson(HTML_DIR, DNS_NAME)

@@ -24,6 +24,7 @@ function renderBlogPostCovers(blogPosts) {
 
     //listen for a click on the blog card
     blogCard.addEventListener('click', () => {
+      window.location.replace(post.url)
 
     })
   })
