@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const BLOG_POSTS = await fetchData("https://tableba.com/blog-posts/blog_posts.json")
+  const BLOG_POSTS = await fetchData("https://tableba.com/src/blog-posts/blog_posts.json")
   renderBlogPostCovers(BLOG_POSTS)
 })
 

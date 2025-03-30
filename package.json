@@ -2,10 +2,10 @@
   "name": "tableba_web",
   "version": "1.0.0",
   "description": "node package for converting html blog files to json",
-  "main": "blog-posts/html_to_json.js",
+  "main": "src/blog-posts/html_to_json.js",
   "type": "module",
   "scripts": {
-    "start": "node blog-posts/html_to_json",
+    "start": "node src/blog-posts/html_to_json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Antoine Geiger",

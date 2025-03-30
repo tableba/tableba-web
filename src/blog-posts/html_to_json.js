@@ -5,8 +5,8 @@ import { JSDOM } from "jsdom"
 async function main() {
   try {
     const DNS_NAME = "https://tableba.com"
-    const HTML_DIR = "./blog-posts/blog-files"
-    const OUTPUT_FILE = "./blog-posts/blog_posts.json"
+    const HTML_DIR = "./src/blog-posts/blog-files"
+    const OUTPUT_FILE = "./src/blog-posts/blog_posts.json"
 
     const htmlJsonContent = await htmlToJson(HTML_DIR, DNS_NAME)
     await fs.writeFile(OUTPUT_FILE, JSON.stringify(htmlJsonContent, null, ), 'utf8');
