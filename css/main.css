@@ -1,12 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--black);
   box-sizing: border-box;
   margin: 0px;
   padding 0px;
   font-family: 'Inter', serif;
-}
-html {
-  scroll-behavior: smooth;
 }
 
 header {
@@ -36,12 +37,6 @@ header {
   font-weight: 700; /* Bold */
 }
 
-#sub_title {
-  font-size: 11px;
-  border: none;
-  color: var(--white);
-}
-
 .options {
   display:flex;
   justify-content: center;
@@ -68,21 +63,21 @@ header {
   text-decoration: none;
 }
 
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
+
+.project_card a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+@media (max-device-width:500px) {
+  body {
+    background-color: gray;
   }
+
 }
 
 main {
   height: 100vh;
-  color: var(--white);
-}
-
-.project_card a {
-  text-decoration: none;
   color: var(--white);
 }
 
