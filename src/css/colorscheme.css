@@ -1,5 +1,11 @@
 :root {
-  --white: rgb(240,233,228);
-  --white_accent: rgb(11,233,228);
-  --black: rgb(15,15,15);
+  --text-primary: rgb(240,233,228);
+  --background: rgb(15,15,15);
+
+  /* Pastel Accent Colors */
+  --pastel-blue:   #bfd1e2;  /* Gentle, airy blue */
+  --pastel-purple: #b3aae2;  /* Soft lavender */
+  --pastel-pink:   #e7a1b0;  /* Delicate pastel pink */
+  --pastel-green:  #a8d5ba;  /* Refreshing, muted mint */
+  --pastel-yellow: #f4e8a8;  /* Warm, light yellow for a subtle highlight */
 }

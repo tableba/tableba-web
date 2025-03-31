@@ -3,10 +3,11 @@ html {
 }
 
 body {
-  background-color: var(--black);
+  margin: 10px;
+  padding 10px;
+  background-color: var(--background);
+  color: var(--text-primary)
   box-sizing: border-box;
-  margin: 0px;
-  padding 0px;
   font-family: 'Inter', serif;
 }
 
@@ -16,58 +17,67 @@ header {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  font-size: 2em;
 }
 
-.titles {
+nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 10px;
+  gap: 30px;
+  list-style: none;
 }
 
-#main_title {
+nav a {
   padding: 10px;
-  background-color: var(--black);
-  color: var(--white);
-  border: 1px solid var(--black);
+  color: var(--text-primary);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--background);
+  background-color: var(--pastel-purple);
   border-radius: 3px;
-  font-size: 50px;
-  font-weight: 700; /* Bold */
-  text-align: center;
+  text-decoration: none;
+}
+
+#main-title {
+  color: var(--text-primary);
+  font-size: 55px;
+  font-weight: 700;
 }
 
 .options {
   display:flex;
+  padding: 0px;
   justify-content: center;
   flex-direction: row;
-  list-style: none;
   gap: 30px;
-  padding: 0px;
-  animation: fadeInAnimation ease 3s;
-  font-size: 30px;
+  font-size: 20px;
+  list-style: none;
 }
 
 .options a {
   padding: 14px;
-  background-color: var(--black);
-  color: var(--white);
-  border: 1px solid var(--white);
-  border-radius: 3px;
-  text-decoration: none;
+  color: var(--text-primary);
+  /* border: 1px solid var(--background); */
+  /* border-radius: 3px; */
+  /* text-decoration: none; */
 }
 
 .options a:hover {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--text-primary);
+  color: var(--background);
   text-decoration: none;
 }
 
+main {
+  height: 100vh;
+}
 
-.project_card a {
+.project-card a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 @media (max-device-width:500px) {
@@ -76,11 +86,4 @@ header {
     align-items: center;
     gap: 50px;
   }
-
 }
-
-main {
-  height: 100vh;
-  color: var(--white);
-}
-
