@@ -5,7 +5,8 @@
   "main": "src/blog-posts/html_to_json.js",
   "type": "module",
   "scripts": {
-    "start": "node src/blog-posts/html_to_json",
+    "posthtml": "node src/blog-posts/html_to_json",
+    "postsounds": "node src/music/post_sounds",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Antoine Geiger",
