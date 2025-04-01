@@ -1,12 +1,14 @@
 import fs from "fs/promises"
 import path from "path"
+import { JSDOM } from "jsdom"
 
+const DNS_NAME = "https://tableba.com"
 const AUDIO_DIR = "./src/music/assets"
 const OUTPUT_FILE = "./src/music/sounds.json"
 
 async function main() {
   try {
-    const soundArray = await readSouds(AUDIO_DIR)
+    const soundArray = await readSouds(AUDIO_DIR, DNS_NAME)
     await fs.writeFile(OUTPUT_FILE, JSON.stringify(soundArray, null, ), 'utf8');
     console.log(`Sound file contents from ${AUDIO_DIR} written to ${OUTPUT_FILE} successfully.`)
   } catch (err) {
@@ -14,12 +16,13 @@ async function main() {
   }
 }
 
-async function readSouds(audioDir) {
+async function readSouds(audioDir, dnsName) {
   let files = []
   try {
     const audioFiles = await fs.readdir(audioDir)
-    for (let sound of audioFiles) {
-      files.push(sound)
+    for (let soundPath of audioFiles) {
+      const filePath = path.join(dnsName, soundPath)
+      files.push(filePath)
     }
     return files
   } catch (err) {

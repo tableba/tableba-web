@@ -8,7 +8,6 @@ function renderBlogPostCovers(blogPosts) {
   const frag = document.createDocumentFragment()
 
   blogPosts.forEach(post => {
-    console.log(post)
     const blogCard = document.createElement("section")
     blogCard.classList.add("blog-card")
 
