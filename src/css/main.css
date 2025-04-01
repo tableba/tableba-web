@@ -12,18 +12,20 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   height: 100vh;
+  position: relative;
 }
 
 nav ul {
+  position: absolute;
+  width: 100%;
+  padding: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   list-style: none;
 }
 
@@ -41,10 +43,16 @@ nav a:hover {
   text-decoration: none;
 }
 
+#main-links {
+  place-self: center;
+}
+
+
 #main-title {
   color: var(--text-primary);
   font-size: 55px;
   font-weight: 700;
+  text-align:center;
 }
 
 .options {
