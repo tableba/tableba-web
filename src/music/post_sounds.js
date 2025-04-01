@@ -2,17 +2,29 @@ import fs from "fs/promises"
 import path from "path"
 
 const AUDIO_DIR = "./src/music/assets"
-const JSON_FILE_OUTPUT = "./src/music/sounds.json"
+const OUTPUT_FILE = "./src/music/sounds.json"
 
-readSouds(AUDIO_DIR)
+async function main() {
+  try {
+    const soundArray = await readSouds(AUDIO_DIR)
+    await fs.writeFile(OUTPUT_FILE, JSON.stringify(soundArray, null, ), 'utf8');
+    console.log(`Sound file contents from ${AUDIO_DIR} written to ${OUTPUT_FILE} successfully.`)
+  } catch (err) {
+    console.log(err)
+  }
+}
 
 async function readSouds(audioDir) {
+  let files = []
   try {
     const audioFiles = await fs.readdir(audioDir)
     for (let sound of audioFiles) {
-      console.log(sound)
+      files.push(sound)
     }
+    return files
   } catch (err) {
     console.error(err)
   }
 }
+
+await main()
