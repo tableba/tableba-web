@@ -21,7 +21,7 @@ async function readSouds(audioDir, dnsName) {
   try {
     const audioFiles = await fs.readdir(audioDir)
     for (let soundPath of audioFiles) {
-      const filePath = path.join(dnsName, soundPath)
+      const filePath = path.join(dnsName, audioDir, soundPath)
       files.push(filePath)
     }
     return files
