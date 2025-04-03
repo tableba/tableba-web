@@ -9,6 +9,7 @@ function renderSounds(soundArr) {
   let soundDiv = document.getElementById("soundDiv")
   let frag = document.createDocumentFragment()
   for (let sound of soundArr) {
+    console.log(sound)
     let audio = document.createElement("audio")
     audio.controls = true
     let source = document.createElement("source")
