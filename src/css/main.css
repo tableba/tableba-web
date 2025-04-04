@@ -13,40 +13,14 @@ body {
 
 header {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto;
   height: 100vh;
   position: relative;
-}
-
-nav ul {
-  position: absolute;
-  width: 100%;
-  padding: 0px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 10px;
-  list-style: none;
-}
-
-nav a {
-  padding: 10px;
-  color: var(--text-primary);
-  font-size: 20px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: var(--background);
-  background-color: var(--pastel-purple);
-  border-radius: 3px;
-  text-decoration: none;
 }
 
 #main-links {
   place-self: center;
 }
-
 
 #main-title {
   color: var(--text-primary);

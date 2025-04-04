@@ -6,18 +6,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 })
 
 function renderSounds(soundArr) {
-  let soundDiv = document.getElementById("soundDiv")
+  let soundDiv = document.getElementById("sound-div")
   let frag = document.createDocumentFragment()
   for (let sound of soundArr) {
     let audio = document.createElement("audio")
+    let audioCard = document.createElement("section")
+    audioCard.classList.add("audio-card")
     audio.controls = true
-    let source = document.createElement("source")
+
     const mime = getMimeType(sound)
+
+    const title = document.createElement("h4")
+    title.innerText = sound.split("/")[2].split(".")[0]
+
+    let source = document.createElement("source")
     source.src = sound
     source.type = mime
 
     audio.appendChild(source)
-    frag.appendChild(audio)
+    audioCard.appendChild(title)
+    audioCard.appendChild(audio)
+    frag.appendChild(audioCard)
   }
   soundDiv.appendChild(frag)
 }
