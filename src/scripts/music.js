@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 function renderSounds(soundArr) {
   let soundDiv = document.getElementById("sound-div")
   let frag = document.createDocumentFragment()
+  for (let i=0; i<10; i++) {
   for (let sound of soundArr) {
     let audio = document.createElement("audio")
     let audioCard = document.createElement("section")
@@ -27,6 +28,7 @@ function renderSounds(soundArr) {
     audioCard.appendChild(title)
     audioCard.appendChild(audio)
     frag.appendChild(audioCard)
+  }
   }
   soundDiv.appendChild(frag)
 }
