@@ -33,8 +33,8 @@ async function htmlToJson(htmlDir, dns) {
       //reading <title> and <summary> inside the html file
       const dom = new JSDOM(content);
       const document = dom.window.document;
-      const title = document.querySelector("header h1").textContent;
-      const summary = document.querySelector("header summary").textContent;
+      const summary = document.querySelector('meta[name="summary"]').getAttribute("content");
+      const title = document.querySelector('meta[name="title"]').getAttribute("content");
 
       //file stats
       const stats = await fs.stat(filePath)
