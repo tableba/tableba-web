@@ -6,6 +6,27 @@
     <meta name="title" content="Useful Linux commands">
     <meta name="summary" content="A non-exhaustive list of handy commands in linux">
     <title>Linux commands</title>
+    <style>
+    pre {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 4px;
+    font-size: 15px;
+    background-color: rgb(230, 230, 230);
+    }
+    code {
+    display: inline-block;
+    margin: 0px;
+    padding: 1px 4px;
+    font-size: 14px;
+    background-color: rgb(240, 240, 240);
+    }
+    li {
+    margin: 20px 0px;
+    }
+    strong {
+    }
+    </style>
   </head>
   <body>
     <header>
@@ -16,7 +37,19 @@
     <main>
       <h1>Terminal commands</h1>
       <ul>
-        <li>sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</li>
+        <li>Search for the fastest mirror and append them to <pre>/etc/pacman.d/mirrorlist</pre> (mirrorlist)
+          <br>
+          <strong><pre>sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</pre></strong></li>
+
+        <li>Start a http server inside the working directory with python 
+          <br>
+          <strong><pre>python -m http.server</pre></strong>
+        <br>
+        It is then accessible in <code>http://localhost:8000/</code></li>
+
+        <li>Display a bonsai in the terminal (install <pre>cbonsai</pre> first on your favorite package manager)
+          <br>
+          <strong><pre>cbonsai --infinite --live</pre></strong></li>
       </ul>
       <h1>Vim commands</h1>
     </main>
