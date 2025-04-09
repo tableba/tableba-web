@@ -29,11 +29,12 @@
   <body>
     <header>
       <h1>Linux commands</h1>
-      <summary>A non-exhaustive list of handy commands in linux</summary>
+      <summary>This is a non-exhaustive list of handy commands in linux and vim.
+These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if you are using another distrubution some of the commands might not work.</summary>
     </header>
 
     <main>
-      <h1>Terminal commands</h1>
+      <h1>General commands</h1>
       <ul>
         <li>Search for the fastest mirror and append them to <pre>/etc/pacman.d/mirrorlist</pre> (mirrorlist)
           <br>
@@ -45,13 +46,21 @@
         <br>
         It is then accessible in <code>http://localhost:8000/</code></li>
 
-        <li>Display a bonsai in the terminal (install <pre>cbonsai</pre> first with your favorite package manager)
+        <li>Scan a directory for viruses or attack signatures (using <code>clamav</code>)
           <br>
-          <strong><pre>cbonsai --infinite --live</pre></strong></li>
+          <strong><pre>sudo freshclam</pre></strong> updates the virus definitions
+          <br>
+          <strong><pre>clamscan -r /path/to/folder</pre></strong> scans the directory
+          <br>
+        </li>
 
-        <li>Display a clock in the terminal (install <pre>ttyclock</pre> first with your favorite package manager)
+        <li>Copy files using <code>rsync</code> (fancy and faster <code>cp</code>)
           <br>
-          <strong><pre>tty-clock -c -C7</pre></strong></li>
+          <strong><pre>rsync -avh --progress</pre></strong>
+          <br>
+          <code>-a</code>: archive mode
+          <code>-v</code>: verbose
+          <code>-h</code>: human readable sizes
       </ul>
       <h1>Vim commands</h1>
       <ul>
