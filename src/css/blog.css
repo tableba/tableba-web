@@ -26,3 +26,13 @@
   background-color: rgb(230, 230, 230);
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+  #blog-container {
+    display: block;
+  }
+
+  .blog-card {
+    width: 95%;
+  }
+}
