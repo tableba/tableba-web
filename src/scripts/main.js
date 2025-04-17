@@ -1,16 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const main_title = document.getElementById("main_title");
-  const sub_title = document.getElementById("sub_title");
-  const options_buttons = document.querySelectorAll(".options");
-  // sub_title.addEventListener("mouseover", () => {
-  //   main_title.classList.add("active");
-  //   options_buttons.forEach(element => {
-  //     element.classList.add("active")
-  //
-  //   });
-  //
-  // })
-  // sub_title.addEventListener("mouseout", () => {
-  //   main_title.classList.remove("active");
-  // })
+  const dropdown = document.querySelectorAll(".dropdown")[0]
+  dropdown.addEventListener("click", () => {
+    dropdown.classList.toggle("open")
+  })
+})
+
+document.addEventListener("click", (event) => {
+  const dropdown = event.target.closest(".dropdown")
+  if (!dropdown) {
+    document.querySelectorAll(".dropdown.open")
+      .forEach(dropdown => dropdown.classList.remove("open"))
+  }
 })
