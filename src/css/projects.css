@@ -1,0 +1,16 @@
+.image-transition {
+  background: url('../img/preview-5686sHI897B9yt_0010-3062168466.jpg') center/contain no-repeat;
+  background-size: cover;
+  height: 20vh;
+}
+
+#projects-page {
+  background-color: var(--text-primary);
+  height: 100vh;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: var(--background);
+}
+

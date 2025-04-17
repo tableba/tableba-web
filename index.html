@@ -6,6 +6,7 @@
     <title>Antoine Geiger</title>
     <link href="src/css/main.css" rel="stylesheet">
     <link href="src/css/colorscheme.css" rel="stylesheet">
+    <link href="src/css/projects.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -14,16 +15,24 @@
         <h1 id="main-title">Antoine Geiger</h1>
         <ul class="options">
           <li><a href="#projects-page">PROJECTS</a></li>
-          <li><a href="src/music.html">MUSIC</a></li>
-          <li><a href="src/blog.html">BLOG</a></li>
+          <li><a href="src/aboutme.html">ABOUT ME</a></li>
           <li><a href="src/contact.html">CONTACT</a></li>
+          <li class="dropdown"><a class="dropdown-button">PERSONAL</a>
+          <div class="dropdown-content">
+            <a href="src/music.html">MUSIC</a>
+            <a href="src/blog.html">BLOG</a>
+          </div></li>
         </ul>
+
       </section>
     </header>
-    <main id="projects-page">
-      <section class="project-card">
-        <a href="https://github.com/tableba">Just look at my github</a>
-      </section>
+    <main>
+      <section class="image-transition"></section>
+      <div id="projects-page">
+        <section class="project-card">
+          <a href="https://github.com/tableba">Just look at my github</a>
+        </section>
+      </div>
     </main>
     <script src="src/scripts/main.js"></script>
   </body>
