@@ -1,5 +1,5 @@
 .image-transition {
-  background: url('../img/transtition.eps') center/contain no-repeat;
+  background: url('../img/transtition_mono.png') center/contain no-repeat;
   background-color: var(--text-primary);
   background-size: auto;
   height: 20vh;
