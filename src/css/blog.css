@@ -23,8 +23,11 @@
 }
 
 .blog-card:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(235, 235, 235);
   cursor: pointer;
+}
+.blog-card:active {
+  background-color: rgb(230, 230, 230);
 }
 
 @media screen and (max-width: 700px) {

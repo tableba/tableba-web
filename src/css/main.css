@@ -18,9 +18,9 @@ header {
 }
 
 .main-title {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  /* position: absolute; */
+  /* top: 1rem; */
+  /* left: 1rem; */
   margin: 0px;
   padding: 0px;
   color: var(--text-primary);
@@ -49,12 +49,13 @@ header {
 .main-links-container { /* main links container */
   flex: 1;
   display: flex;
+  flex-direction: column;
+  gap: 30px;
   align-items: center;
   justify-content: center;
 }
 .options {
   display:flex;
-  justify-content: center;
   flex-direction: row;
   gap: 30px;
   padding: 0px; /* padding issues, used for alighing to center */
@@ -65,13 +66,26 @@ header {
 .options a {
   padding: 14px 50px;
   color: var(--text-primary);
+  box-shadow: 7px 7px var(--text-primary); /* makes it pop out */
   border: 1px solid var(--text-primary);
   text-decoration: none;
+  transition: 0.2s;
 }
 .options a:hover { /* change color and background with transition */
-  background-color: var(--text-primary);
-  color: var(--background);
+  /* background-color: var(--text-primary); */
+  /* color: var(--background); */
+  box-shadow: 0px 0px var(--text-primary); /* makes it pop out */
   transition: 0.2s;
+}
+.options a:active { /* change color and background with transition */
+  background-color: var(--accent-color);
+  /* color: var(--background); */
+  transform: scale(1.05); /* slightly grows the element */
+  /* color: var(--text-primary); */
+  /* background-color: var(--background); */
+
+  box-shadow: 0px 0px 0px 0px var(--text-primary); /* makes it pop out */
+  transition: 0.1s;
 }
 
 @media (max-device-width:500px) {
@@ -79,5 +93,9 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+  }
+  .options a:active {
+    background-color: var(--background);
+    transition: 0.1s ease-in;
   }
 }
