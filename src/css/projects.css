@@ -1,6 +1,8 @@
 .image-transition {
   background: url('../img/transtition_mono.png') center/contain no-repeat;
-  background-size: auto;
+  background-size: contain;
+  width: 100%;
+  aspect-ratio: 1920 / 259;
 }
 
 #projects-page {
