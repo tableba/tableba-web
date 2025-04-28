@@ -18,15 +18,17 @@ header {
 }
 
 .main-title {
-  /* position: absolute; */
-  /* top: 1rem; */
-  /* left: 1rem; */
-  margin: 0px;
+  margin: 0 30px;
   padding: 0px;
   color: var(--text-primary);
   font-size: 55px;
   font-weight: 700;
 }
+
+.main-title h1 {
+  display: inline;
+}
+
 
 .nav-bar {
   position: absolute;
@@ -89,10 +91,35 @@ header {
 }
 
 @media (max-device-width:500px) {
+  .main-title{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .main-title h1 {
+    display: inline-block;
+    width: 300px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #last-name {
+    text-align: right;
+  }
+
+  .options a {
+    display: inline-block;
+    width: 190px;
+    padding: 14px 0;
+    margin: 0px;
+    text-align: center;
+  }
+
   .options {
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
   }
   .options a:active {
     /* background-color: var(--background); */
