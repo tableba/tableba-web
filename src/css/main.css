@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-
 body {
   padding: 0px;
   margin: 0px;
@@ -10,7 +9,6 @@ body {
   color: var(--text-primary);
   font-family: 'Inter', serif;
 }
-
 header {
   display: flex;
   height: 100vh;
@@ -24,11 +22,11 @@ header {
   font-size: 55px;
   font-weight: 700;
 }
-
-.main-title h1 {
-  display: inline;
+.main-title h1 { /* margin issues */
+  margin: 0px;
 }
-
+#hiim {display:none;} /* hides the mobile headers */
+#name-mobile {display:none;}
 
 .nav-bar {
   position: absolute;
@@ -43,12 +41,16 @@ header {
   color: var(--text-primary);
   text-align: right;
 }
-.nav-bar a:hover { /* elements inside nav hover*/
+.nav-bar a:hover {
   color: grey;
   transition: 0.2s;
 }
+.nav-bar a:active {
+  color: darkgray;
+  transition: 0.1s;
+}
 
-.main-links-container { /* main links container */
+.main-links-container { /* puts everything in the dead center */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -56,6 +58,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .options {
   display:flex;
   flex-direction: row;
@@ -67,45 +70,57 @@ header {
 }
 .options a {
   padding: 14px 50px;
-  color: var(--text-primary);
-  box-shadow: 7px 7px var(--text-primary); /* makes it pop out */
   border: 1px solid var(--text-primary);
+  box-shadow: 7px 7px var(--text-primary);
+  color: var(--text-primary);
   text-decoration: none;
   transition: 0.2s;
 }
 .options a:hover { /* change color and background with transition */
-  /* background-color: var(--text-primary); */
-  /* color: var(--background); */
-  box-shadow: 0px 0px var(--text-primary); /* makes it pop out */
+  background-color: var(--eggshell);
+  box-shadow: 0 0;
   transition: 0.2s;
 }
 .options a:active { /* change color and background with transition */
-  background-color: var(--accent-color);
-  /* color: var(--background); */
+  background-color: var(--pastel-purple);
   transform: scale(1.05); /* slightly grows the element */
-  /* color: var(--text-primary); */
-  /* background-color: var(--background); */
-
-  box-shadow: 0px 0px 0px 0px var(--text-primary); /* makes it pop out */
-  transition: 0.1s;
+  box-shadow: 0 0;
+  transition: 0.05s;
 }
 
 @media (max-device-width:500px) {
-  .main-title{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-
+  .main-links-container { /* reduce gap */
+    gap: 20px;
   }
-  .main-title h1 {
-    display: inline-block;
-    width: 300px;
+
+  .nav-bar a:active {
+    transition: 0s;
+  }
+
+  .main-title {
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+  }
+  .main-title * {
     margin: 0px;
     padding: 0px;
   }
+  .mobile-wrapper { /* right align the titles */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-  #last-name {
-    text-align: right;
+  #name {
+    display:none;
+  }
+  #hiim {
+    display: inline-block;
+    font-size: 20px;
+  }
+  #name-mobile {
+    display: inline-block;
   }
 
   .options a {
@@ -119,10 +134,15 @@ header {
   .options {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
+    font-size: 18px;
   }
   .options a:active {
     /* background-color: var(--background); */
     transition: 0s;
   }
 }
+@media (max-device-width:405px) {
+  .main-title {
+    font-size: 55px
+  }

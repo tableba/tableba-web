@@ -2,13 +2,13 @@
   --background: rgb(255,255,255);
   --background-egg: rgb(240,233,228);
   --text-primary: rgb(15,15,15);
-  --accent-color: rgb(240,240,240);
+  --accent-color: rgb(245,245,245);
+  --pastel-purple: rgb(189,169,233);
+  --pastel-blue: rgb(156,196,217);
+  --eggshell: rgb(246,237,208);
 
   /* Pastel Accent Colors */
-  --pastel-blue:   #bfd1e2;  /* Gentle, airy blue */
-  --pastel-purple: #b3aae2;  /* Soft lavender */
   --pastel-pink:   #e7a1b0;  /* Delicate pastel pink */
   --pastel-green:  #a8d5ba;  /* Refreshing, muted mint */
-  --pastel-yellow: #f4e8a8;  /* Warm, light yellow for a subtle highlight */
   --pastel-grey: rgb(200, 200, 200);  /* Warm, light yellow for a subtle highlight */
 }
