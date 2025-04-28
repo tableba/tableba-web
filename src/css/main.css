@@ -19,7 +19,7 @@ header {
   margin: 0 30px;
   padding: 0px;
   color: var(--text-primary);
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 700;
 }
 .main-title h1 { /* margin issues */
