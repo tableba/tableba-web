@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Music() {
+
+  useEffect(() => {
+    const MUSIC_PATH = "/music/"
+
+  }, [])
+
   return (
     <>
       <main>
         <p>
-          This is a snippet of the music I make. If you like any of the sounds and want to work with me, feel free to{' '}
-          <a href="./contact.html">contact me</a>
+          This is a snippet of the music I make. If you like any of the sounds and want to work with me, feel free to
+          <Link to="/contact">contact me</Link>
         </p>
         <div id="sound-div"></div>
       </main>
@@ -23,8 +30,6 @@ function Music() {
           </a>
         </p>
       </footer>
-
-      {/* If you need the script functionality, import or implement it in useEffect */}
     </>
   );
 }

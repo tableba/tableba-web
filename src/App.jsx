@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Blog from "./pages/Blog";
@@ -7,7 +7,7 @@ import Music from "./pages/Music";
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
@@ -15,6 +15,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/music" element={<Music />} />
       </Routes>
-    </BrowserRouter>
+    </div>
   );
 }
+
+export default App
