@@ -1,0 +1,8 @@
+@config "../../tailwind.config.js";
+@import "tailwindcss";
+
+@layer components {
+  .link-opt {
+    @apply block py-3 px-12 text-[17px] text-center border border-current rounded-full md:rounded-lg hover:shadow-none hover:border-textPrimary md:shadow-[4px_4px_currentColor] transition-all duration-200
+  }
+}
