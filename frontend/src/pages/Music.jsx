@@ -8,11 +8,12 @@ function Music() {
   useEffect(() => {
     const fetchMusic = async () => {
       try {
+        console.log("This is the env url:")
+        console.log(import.meta.env.VITE_API_URL)
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/music`)
         const data = await response.json()
         setSoundArray(data)
         console.log(data)
-        console.log(import.meta.env.VITE_API_URL)
       } catch (err) {
         console.error(`Fetch error: ${err}`)
       }
