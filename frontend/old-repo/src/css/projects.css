@@ -1,0 +1,35 @@
+.image-transition {
+  background: url('../img/transtition_mono.png') center/contain no-repeat;
+  background-size: contain;
+  width: 100%;
+  aspect-ratio: 1920 / 259;
+}
+
+#projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: var(--text-primary);
+  height: 100vh;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  color: var(--background);
+  border: 1px solid var(--background);
+}
+
+.project-card a{ 
+  color: var(--background);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.project-card a:hover {
+  color: var(--text-primary);
+  background-color: var(--background);
+}

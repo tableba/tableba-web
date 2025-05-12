@@ -1,0 +1,17 @@
+{
+  "name": "tableba_web",
+  "version": "1.0.0",
+  "description": "node package for converting html blog files to json",
+  "main": "src/blog-posts/html_to_json.js",
+  "type": "module",
+  "scripts": {
+    "posthtml": "node src/blog-posts/html_to_json",
+    "postsounds": "node src/music/post_sounds",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antoine Geiger",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^26.0.0"
+  }
+}

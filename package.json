@@ -1,31 +1,24 @@
 {
-  "name": "tableba-web",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "tableba_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "concurrently \"npm run server --prefix backend\" \"npm run dev --prefix frontend\""
   },
-  "dependencies": {
-    "@fontsource/inter": "^5.2.5",
-    "@tailwindcss/vite": "^4.0.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.5.3",
-    "tailwindcss": "^4.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tableba/tableba_web.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tableba/tableba_web/issues"
+  },
+  "homepage": "https://github.com/tableba/tableba_web#readme",
   "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react": "^4.4.1",
-    "eslint": "^9.25.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "vite": "^6.3.5"
+    "concurrently": "^9.1.2"
   }
 }

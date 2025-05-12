@@ -1,0 +1,36 @@
+body {
+  margin: 10px;
+  padding 10px;
+  background-color: var(--background);
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+#sound-div {
+}
+
+.audio-card {
+  width: fit-content;
+  padding: 10px;
+  margin: 10px 5px;
+  display: inline-block;
+  border: 1px solid var(--text-primary);
+}
+
+.audio-card h4 {
+  font-style: italic;
+}
+
+footer {
+
+}
+
+@media (max-device-width:500px) {
+  #sound-div {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+  }
+  
+}
