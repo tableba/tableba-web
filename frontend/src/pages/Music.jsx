@@ -5,15 +5,18 @@ function Music() {
 
   const [soundArray, setSoundArray] = useState([])
 
-  useEffect(async () => {
-    try {
-      const response = await fetch("localhost:4003/api/sounds")
-      const data = await response.json()
-      setSoundArray(data)
-      console.log(soundArray)
-    } catch (err) {
-      console.error(`Fetch error: ${err}`)
+  useEffect(() => {
+    const fetchMusic = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/music`)
+        const data = await response.json()
+        setSoundArray(data)
+        console.log(data)
+      } catch (err) {
+        console.error(`Fetch error: ${err}`)
+      }
     }
+    fetchMusic()
 
   }, [])
 
