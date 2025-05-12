@@ -5,6 +5,9 @@
   * {
     box-sizing: border-box;
   }
+  .anchor {
+    @apply text-blue-800 hover:text-blue-900 hover:cursor-pointer underline
+  }
   .link-opt {
     @apply block w-[190px] md:w-auto py-3 px-12 text-[17px] text-center border border-current rounded-full md:rounded-lg hover:shadow-none hover:border-black md:shadow-[4px_4px_currentColor] transition-all duration-200
   }
@@ -14,4 +17,5 @@
   .project-item {
     @apply p-4 bg-gray-400 rounded
   }
+  
 }

@@ -14,6 +14,7 @@ module.exports = {
         pastel_grey: "rgb(200, 200, 200)",
       },
       fontFamily: {
+        times: ['"Times New Roman"', 'serif'],
       },
     },
   },

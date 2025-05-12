@@ -1,0 +1,159 @@
+.default-html * {
+  all: revert;
+  box-sizing: content-box;
+}
+.default-html html {
+  display: block;
+}
+
+.default-html body {
+  display: block;
+  margin: 8px;
+}
+
+.default-html h1 {
+  display: block;
+  font-size: 2em;
+  margin: 0.67em 0;
+  font-weight: bold;
+}
+
+.default-html h2 {
+  display: block;
+  font-size: 1.5em;
+  margin: 0.75em 0;
+  font-weight: bold;
+}
+
+.default-html h3 {
+  display: block;
+  font-size: 1.17em;
+  margin: 0.83em 0;
+  font-weight: bold;
+}
+
+.default-html h4 {
+  display: block;
+  margin: 1.12em 0;
+  font-weight: bold;
+}
+
+.default-html h5 {
+  display: block;
+  font-size: 0.83em;
+  margin: 1.5em 0;
+  font-weight: bold;
+}
+
+.default-html h6 {
+  display: block;
+  font-size: 0.75em;
+  margin: 1.67em 0;
+  font-weight: bold;
+}
+
+.default-html p {
+  display: block;
+  margin: 1em 0;
+}
+
+.default-html ul,
+.default-html menu,
+.default-html dir {
+  display: block;
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 40px;
+}
+
+.default-html ol {
+  display: block;
+  list-style-type: decimal;
+  margin: 1em 0;
+  padding-left: 40px;
+}
+
+.default-html li {
+  display: list-item;
+}
+
+.default-html a {
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.default-html code,
+.default-html kbd,
+.default-html pre,
+.default-html samp {
+  font-family: monospace, monospace;
+}
+
+.default-html b,
+.default-html strong {
+  font-weight: bolder;
+}
+
+.default-html i,
+.default-html em {
+  font-style: italic;
+}
+
+.default-html table {
+  display: table;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+.default-html tr {
+  display: table-row;
+}
+
+.default-html td,
+.default-html th {
+  display: table-cell;
+  padding: 1px;
+}
+
+.default-html th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.default-html input,
+.default-html button,
+.default-html select,
+.default-html textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.default-html button {
+  text-transform: none;
+}
+
+.default-html button,
+.default-html input {
+  overflow: visible;
+}
+
+.default-html textarea {
+  overflow: auto;
+}
+
+.default-html fieldset {
+  padding: 0.35em 0.75em 0.625em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+
+.default-html legend {
+  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: none;
+}
