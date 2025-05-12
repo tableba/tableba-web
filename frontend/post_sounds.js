@@ -2,9 +2,9 @@ import fs from "fs/promises"
 import path from "path"
 import { JSDOM } from "jsdom"
 
-const AUDIO_DIR = "./public/music/assets"
+const AUDIO_DIR = "./src/music/assets"
 const RELATIVE_OUTPUT_DIR = "./music/assets"
-const OUTPUT_FILE = "./public/music/sounds.json"
+const OUTPUT_FILE = "./src/music/sounds.json"
 
 async function main() {
   try {
