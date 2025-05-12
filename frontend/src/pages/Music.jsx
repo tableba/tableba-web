@@ -12,6 +12,7 @@ function Music() {
         const data = await response.json()
         setSoundArray(data)
         console.log(data)
+        console.log(import.meta.env.VITE_API_URL)
       } catch (err) {
         console.error(`Fetch error: ${err}`)
       }
