@@ -1,6 +1,6 @@
 function Projects() {
   return (
-    <div className="box-border">
+    <div className="box-border h-200vf">
       <img className="image-transition" src="/img/transtition_mono.png"></img>
       <div className="bg-text_primary h-screen flex flex-col items-center gap-10">
         <section className="project-card">
