@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Adding a ssh key to a github account">
+    <meta name="summary" content="A short cheat sheet on how to add a ssh key to github, wihout any unnecessary info">
+    <title>Add ssh to github</title>
+    <style>
+
+    pre {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 4px;
+    font-size: 15px;
+    background-color: rgb(230, 230, 230);
+    white-space: pre-wrap;
+    }
+    code {
+    display: inline-block;
+    margin: 0px;
+    padding: 1px 4px;
+    font-size: 14px;
+    background-color: rgb(240, 240, 240);
+    }
+    li {
+    margin: 20px 0px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Generating a new SSH key</h1>
+      <ul>
+        <li>
+          <h2>Generating a new SSH key</h2>
+          <p>If your system is relatively recent:</p>
+          <strong><pre>ssh-keygen -t ed25519 -C "your_email@example.com"</pre></strong>
+          <p>If a little older (<code>ed25519</code> isn't supported):</p>
+          <strong><pre>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</pre></strong>
+        </li>
+
+        <li>
+          <h2>Adding SSH key to SSH agent</h2>
+          <p>Start the agent:</p>
+          <strong><pre>eval "$(ssh-agent -s)"</pre></strong>
+          <p>Add you key:</p>
+          <strong><pre>ssh-add ~/.ssh/id_ed25519</pre></strong>
+        </li>
+        
+        <li>
+          <h2>Adding SSH key to GitHub</h2>
+          <p>print the public key (copy it to your clipboard)</p>
+          <strong><pre>cat ~/.ssh/id_ed25519.pub</pre></strong>
+          <p>Go to <a href="https://github.com/settings/keys">GitHub > Settings > Keys</a> Then <u>New SSH key > Paste your public key</u> </p>
+        </li>
+
+      </ul>
+    </main>
+
+  </body>
+</html>

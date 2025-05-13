@@ -23,19 +23,19 @@ function Blog() {
   return (
     <div className="font-[Noto]">
       <h3>Blog Postz:</h3>
-      <main>
-        <div className="flex justify-center items-center sm:items-stretch flex-col sm:flex-row" id="blog-container">
+      <main className="">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-1 " id="blog-container">
           {
             blogFilesJson ? (
               blogFilesJson.map(blogFile => (
                 <div
                   key={blogFile.path}
-                  className="inline-block w-9/10 sm:w-6/10 md:w-3/10 m-3 p-3 border border-text_primary md:hover:bg-accent_color md:active:bg-gray-200 transition duration-200"
+                  className="inline-block m-3 p-3 border border-text_primary md:hover:bg-accent_color md:active:bg-gray-200 transition duration-200"
 
                   // redirect to the blog file when clicked
                   onClick={() => {window.location.href = `/${blogFile.path}`}}>
 
-                  <h2 className="font-bold">{blogFile.title}</h2>
+                  <h2 className="font-bold mb-1 italic">{blogFile.title}</h2>
                   <p>{blogFile.description}</p>
                 </div>
               ))
