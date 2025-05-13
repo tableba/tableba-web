@@ -81,7 +81,8 @@ function Home() {
       >
       <Projects />
       </main>
-      <footer className="z-20"
+      <footer 
+        className="relative z-10 overflow-hidden"
         style={{
           transform: `translateY(${offsetY * -1.1}px)`,
           }}
