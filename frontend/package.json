@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "npm run postSounds && npm run postBlogs && vite",
+    "build": "npm run postSounds && npm run postBlogs && vite build",
     "postSounds": "node ./public/music/post_sounds",
     "postBlogs": "node ./public/blog-posts/html_to_json.js",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
