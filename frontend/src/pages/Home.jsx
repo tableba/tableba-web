@@ -16,19 +16,19 @@ function Home() {
   return (
     <div>      
       <header
-  className="flex relative h-screen z-10 transition-opacity duration-100"
-  style={{
-    opacity: 1 - (offsetY - 100) / 300,
-    }}
+        className="flex relative h-screen z-10 transition-opacity duration-100"
+        style={{
+          opacity: 1 - (offsetY - 100) / 300,
+        }}
       >
 
         <div className="absolute inset-0 -z-1"
-        style={{
-          transform: `translateY(${offsetY * 0.2}px)`,
-        }}>
-          </div>
+          style={{
+            transform: `translateY(${offsetY * 0.2}px)`,
+          }}>
+        </div>
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center gap-8 px-6">
-        <NavBar />
+          <NavBar />
           <section className="text-text_primary">
             <h1 className="hidden md:block text-6xl font-bold m-0">
               Antoine Geiger
@@ -74,20 +74,14 @@ function Home() {
       </header>
 
       <main 
-          className="relative z-10 overflow-hidden"
-        style={{
-          transform: `translateY(${offsetY * -1.1}px)`,
-          }}
+        className="relative z-10 "
       >
-      <Projects />
+        <Projects />
       </main>
       <footer 
-        className="relative z-10 overflow-hidden"
-        style={{
-          transform: `translateY(${offsetY * -1.1}px)`,
-          }}
+        className="relative z-10 "
       >
-      <Footer />
+        <Footer />
       </footer>
 
     </div>
