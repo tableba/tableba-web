@@ -31,7 +31,18 @@
           <strong><pre>mkdir -p /var/lib/iwd && touch /var/lib/iwd/eduroam.8021x</pre></strong>
         </li>
         <li>Add this content to it:<br>
-          <pre>[Security]<br>EAP-Method=PEA<br>PEAP-Identity=your_username@your_institution.edu<br>EAP-PEAP-Phase2-Method=MSCHAPV2<br>EAP-PEAP-ServerDomainMask=your_institution.edu<br>EAP-PEAP-Password=your_password<br>EOL</pre>
+          <pre>
+[Security]<br>
+EAP-Method=PEAP<br>
+EAP-Identity=your_username@your_institution.edu<br>
+EAP-PEAP-Password=your_password<br>
+EAP-PEAP-Phase2-Method=MSCHAPV2<br>
+EAP-PEAP-Phase2-Identity=your_username@your_institution.edu<br>
+EAP-PEAP-Phase2-Password=your_password<br>
+<br>
+[Settings]<br>
+Autoconnect=true<br>
+          </pre>
         </li>
       </ul>
       <h2>Connect to eduroam</h2>
