@@ -31,7 +31,7 @@
     <header>
       <h1>Linux commands</h1>
       <summary>This is a non-exhaustive list of handy commands in linux and vim.
-These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if you are using another distrubution some of the commands might not work.</summary>
+        These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if you are using another distrubution some of the commands might not work.</summary>
     </header>
 
     <main>
@@ -44,8 +44,8 @@ These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if y
         <li>Start a http server inside the working directory with python 
           <br>
           <strong><pre>python -m http.server</pre></strong>
-        <br>
-        It is then accessible in <code>http://localhost:8000/</code></li>
+          <br>
+          It is then accessible in <code>http://localhost:8000/</code></li>
 
         <li>Scan a directory for viruses or attack signatures (using <code>clamav</code>)
           <br>
@@ -53,6 +53,14 @@ These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if y
           <br>
           <strong><pre>clamscan -r /path/to/folder</pre></strong> scans the directory
           <br>
+        </li>
+        <li>Extract a tarball
+          <br>
+          <strong><pre>tar -xvf file.tar</pre></strong> extract
+          <br>
+          <strong><pre>tar -xvzf file.tar.gz</pre></strong> extract gzip
+          <br>
+          <strong><pre>tar -xvjf file.tar.bz2</pre></strong> extract bzip2
         </li>
 
         <li>Copy files using <code>rsync</code> (fancy and faster <code>cp</code>)
@@ -64,10 +72,6 @@ These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if y
           <code>-h</code>: human readable sizes
         </li>
 
-        <li>Add a submodule when cloning a github repository
-          <br>
-          <strong><pre>git submodule upadte --init --recursive</pre></strong>
-        </li>
       </ul>
 
       <h1>Vim commands</h1>
@@ -89,6 +93,6 @@ These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if y
           <strong><pre>:Ex</pre></strong></li>
       </ul>
     </main>
-  
+
   </body>
 </html>

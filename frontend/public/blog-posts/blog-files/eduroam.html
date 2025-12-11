@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="How to connect to eduroam in Linux">
+    <meta name="title" content="How to connect to eduroam in Arch Linux">
     <meta name="summary" content="This blog post covers over how do connect to eduroam inside arch linux using iwd.">
     <title>eduroam</title>
     <style>
     pre {
     display: inline-block;
-    margin: 0px;
-    padding: 5px;
+    margin: 3px;
+    padding: 3px 4px;
+    font-size: 15px;
+    background-color: rgb(230, 230, 230);
+    white-space: pre-wrap;
     }
     </style>
   </head>
   <body>
     <header>
-      <h1>How to connect to eduroam in Linux</h1>
+      <h1>How to connect to eduroam in Arch Linux</h1>
       <summary>This blog post covers over how do connect to eduroam inside arch linux using iwd.</summary>
     </header>
     <hr>
@@ -26,7 +29,7 @@
       <h2>Create eduroam config file</h2>
       <p><strong>iwctl </strong>will not be configured automatically like the other networks, you need to create a config file.</p>
       <ul>
-        <li>Create the file <pre>/var/lib/iwd/eduroam.8021x</pre> with :
+        <li>Create <pre>/var/lib/iwd/eduroam.8021x</pre> using :
           <br>
           <strong><pre>mkdir -p /var/lib/iwd && touch /var/lib/iwd/eduroam.8021x</pre></strong>
         </li>
@@ -41,7 +44,7 @@ EAP-PEAP-Phase2-Identity=your_username@your_institution.edu<br>
 EAP-PEAP-Phase2-Password=your_password<br>
 <br>
 [Settings]<br>
-Autoconnect=true<br>
+Autoconnect=true
           </pre>
         </li>
       </ul>

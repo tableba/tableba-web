@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +9,7 @@
 
     pre {
     display: inline-block;
-    margin: 3px;
+    margin: 1px;
     padding: 3px 4px;
     font-size: 15px;
     background-color: rgb(230, 230, 230);
@@ -31,14 +30,42 @@
   </head>
   <body>
     <main>
+
+          <h2>Misc git commands</h2>
+          <ul>
+            <li>
+              Undo the last commit without losing changes:
+              <strong><pre>git reset --soft HEAD~1</pre></strong>
+            </li>
+            <li>
+              See what changed in any commit:
+              <strong><pre>git show &lt;commit-hash&gt;</pre></strong>
+            </li>
+            <li>
+              Clean untracked files safely (dry run first):
+              <strong><pre>git clean -n</pre></strong>
+              Actually delete:
+              <strong><pre>git clean -f</pre></strong>
+            </li>
+            <li>
+              Restore a deleted file from last commit:
+              <strong><pre>git restore &lt;filename&gt;</pre></strong>
+            </li>
+            <li>
+              List files changed in a branch compared to main:
+              <strong><pre>git diff --name-only main..your-branch</pre></strong>
+            </li>
+            <li>Add a submodule when cloning a github repository
+              <strong><pre>git submodule upadte --init --recursive</pre></strong>
+            </li>
+          </ul>
+
       <h1>Generating a new SSH key</h1>
       <ul>
         <li>
           <h2>Generating a new SSH key</h2>
           <p>If your system is relatively recent:</p>
           <strong><pre>ssh-keygen -t ed25519 -C "your_email@example.com"</pre></strong>
-          <p>If a little older (<code>ed25519</code> isn't supported):</p>
-          <strong><pre>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</pre></strong>
         </li>
 
         <li>
@@ -56,8 +83,10 @@
           <p>Go to <a href="https://github.com/settings/keys">GitHub > Settings > Keys</a>. Then <u>New SSH key > Paste your public key</u> </p>
         </li>
 
+
       </ul>
     </main>
 
   </body>
 </html>
+
