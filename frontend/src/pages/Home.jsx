@@ -22,11 +22,6 @@ function Home() {
         }}
       >
 
-        <div className="absolute inset-0 -z-1"
-          style={{
-            transform: `translateY(${offsetY * 0.2}px)`,
-          }}>
-        </div>
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center gap-8 px-6">
           <NavBar />
           <section className="text-text_primary">
@@ -48,14 +43,14 @@ function Home() {
             <li>
               <a
                 href="#projects-page"
-                className="link-opt hover:bg-blue-500 active:bg-blue-600 hover:text-background"
+                className="link-opt hover:bg-accent_color active:bg-gray-200"
               >
                 PROJECTS
               </a>
             </li>
             <li>
               <Link
-                to="/music"
+                to=""
                 className="link-opt hover:bg-accent_color active:bg-gray-200"
               >
                 MUSIC
@@ -64,7 +59,7 @@ function Home() {
             <li>
               <Link
                 to="/blog"
-                className="link-opt hover:bg-red-500 active:bg-red-600 hover:text-background"
+                className="link-opt hover:bg-accent_color active:bg-gray-200"
               >
                 BLOG
               </Link>
@@ -76,7 +71,9 @@ function Home() {
       <main 
         className="relative z-10 "
       >
-        <Projects />
+        <Projects
+        className="projects-page"
+        />
       </main>
       <footer 
         className="relative z-10 "

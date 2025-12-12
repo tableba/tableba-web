@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         times: ['"Times New Roman"', 'serif'],
+        monospace: ['Space Mono', 'monospace'],
       },
     },
   },
