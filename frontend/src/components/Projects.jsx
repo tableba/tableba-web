@@ -1,38 +1,19 @@
+import ProjectCard from "./ProjectCard.jsx";
+
 function Projects() {
   return (
     <div className="box-border h-200vf">
 
-      <img className="image-transition" src="/img/transtition_mono.png"></img>
+      <img className="image-transition w-full" src="/img/transtition_mono.png"></img>
 
       <div className="project-page bg-text_primary flex flex-col items-center gap-10">
 
-        <section className="project-card">
-          <div className="project-item text-5xl font-bold row-span-1">TExt</div>
-          <img className="project-item row-span-2 col-span-2" src="https://placehold.co/800x500?text=Slide+1" />
-          <div className="project-item row-span-3 col-span-1" href="https://github.com/tableba" target="_blank" rel="noopener noreferrer">
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-            ptionEscriopptionscriopption
-          </div>
-        </section>
-
-        <section className="project-card">
-          <a className="project-item row-span-3" href="https://github.com/tableba" target="_blank" rel="noopener noreferrer">
-            sideBar
-          </a>
-          <a className="project-item col-span-2" href="https://github.com/tableba" target="_blank" rel="noopener noreferrer">
-            Title
-          </a>
-          <a className="project-item col-span-2 row-span-2" href="https://github.com/tableba" target="_blank" rel="noopener noreferrer">
-            Desk
-          </a>
-        </section>
+        <ProjectCard
+          title="Repairing a Sansa Clip Sport MP3 player"
+          description="Bought from a second hand shop this Sansa Clip Sport was missing components and was not turning on. Click on the image to see how it got repaired and why there is a text saying 'ipod 2'."
+          imageSrc="https://placehold.co/800x500?text=Slide+1"
+          link="https://github.com/tableba"
+        />
       </div>
     </div>
   )

@@ -12,10 +12,10 @@
     @apply block w-[190px] md:w-auto py-3 px-12 text-[17px] text-center border border-current rounded-lg md:rounded-lg hover:shadow-none hover:border-black md:shadow-[4px_4px_currentColor] transition-all duration-200
   }
   .project-card {
-    @apply grid grid-flow-col grid-rows-3 gap-4 w-95/100 p-4 text-background;
+    @apply text-background;
   }
   .project-item {
-    @apply p-0
+    @apply m-2
   }
   
 }
