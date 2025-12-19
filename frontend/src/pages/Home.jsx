@@ -25,7 +25,7 @@ function Home() {
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center gap-8 px-6">
           <NavBar />
           <section className="text-text_primary">
-            <h1 className="hidden md:block text-6xl font-bold m-0">
+            <h1 className="hidden md:block 2xl:text-7xl md:text-6xl font-bold m-0">
               Antoine Geiger
             </h1>
             <div className="md:hidden flex flex-col items-start">

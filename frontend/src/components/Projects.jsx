@@ -10,7 +10,8 @@ function Projects() {
 
         <ProjectCard
           title="Repairing a Sansa Clip Sport MP3 player"
-          description="Bought from a second hand shop this Sansa Clip Sport was missing components and was not turning on. Click on the image to see how it got repaired and why there is a text saying 'ipod 2'."
+          description='Bought from a second hand shop this Sansa Clip Sport was missing components and was not turning on.
+          Click on the image to see how it got repaired and why there is a text saying "ipod 2".'
           imageSrc="https://placehold.co/800x500?text=Slide+1"
           link="https://github.com/tableba"
         />
