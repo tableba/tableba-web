@@ -63,13 +63,34 @@
           <strong><pre>tar -xvjf file.tar.bz2</pre></strong> extract bzip2
         </li>
 
-        <li>Copy files using <code>rsync</code> (fancy and faster <code>cp</code>)
+        <li>Copy files using <code>rsync</code> (fancier and faster <code>cp</code>)
           <br>
           <strong><pre>rsync -avh --progress</pre></strong>
           <br>
           <code>-a</code>: archive mode
           <code>-v</code>: verbose
           <code>-h</code>: human readable sizes
+        </li>
+        <li>WireGuard VPN
+          <br>
+          <strong><pre>wg-quick up config_name</pre></strong> to enable
+          <br>
+          <strong><pre>wg-quick down config_name</pre></strong> to disable
+        </li>
+
+        <li>YT-DLP
+          <ul>
+            <li>
+              Copy playlist with little metadata (only cover picture)
+              <br>
+              <strong><pre> yt-dlp -x -f bestaudio \
+                --audio-format mp3 \
+                --audio-quality 0 \
+                --embed-thumbnail \
+                --postprocessor-args "-map_metadata -1" \
+                PLAYLIST_URL </pre></strong>
+            </li>
+          </ul>
         </li>
 
       </ul>

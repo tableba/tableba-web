@@ -6,7 +6,7 @@ function Projects() {
 
       <img className="image-transition w-full" src="/img/transtition_mono.png"></img>
 
-      <div className="project-page bg-text_primary flex flex-col items-center gap-10">
+      <div id="projects-start" className="project-page bg-text_primary flex flex-col items-center gap-10">
 
         <ProjectCard
           title="Repairing a Sansa Clip Sport MP3 player"

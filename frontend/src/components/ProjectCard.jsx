@@ -11,9 +11,9 @@ function ProjectCard({ title, description, imageSrc, link }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="col-span-1 md:col-start-1 md:row-start-3 ml-0 md:ml-10 self-start"
+        className="col-span-1 md:col-start-1 md:row-start-3 ml-0 md:ml-20 self-start"
       >
-        <div className="2xl:w-[800px] xl:w-[700px] w-full aspect-[16/10]">
+        <div className="2xl:w-[800px] w-[550px] aspect-[16/10]">
           <img
             className="project-item w-full h-full object-cover origin-center transition-transform duration-500 ease-out hover:scale-[1.03]"
             src={imageSrc}

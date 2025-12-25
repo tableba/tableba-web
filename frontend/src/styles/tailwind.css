@@ -5,6 +5,11 @@
   * {
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+  }
   .anchor {
     @apply text-blue-800 hover:text-blue-900 hover:cursor-pointer underline
   }
@@ -17,5 +22,9 @@
   .project-item {
     @apply m-2
   }
+  .footer-style {
+    @apply bg-text_primary text-background
+  }
+
   
 }
