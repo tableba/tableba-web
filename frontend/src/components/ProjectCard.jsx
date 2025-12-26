@@ -13,7 +13,7 @@ function ProjectCard({ title, description, imageSrc, link }) {
         rel="noopener noreferrer"
         className="col-span-1 md:col-start-1 md:row-start-3 ml-0 md:ml-20 self-start"
       >
-        <div className="2xl:w-[800px] w-[550px] aspect-[16/10]">
+        <div className="2xl:w-[800px] md:w-[550px] w-[100%] flex justify-center aspect-[16/10]">
           <img
             className="project-item w-full h-full object-cover origin-center transition-transform duration-500 ease-out hover:scale-[1.03]"
             src={imageSrc}

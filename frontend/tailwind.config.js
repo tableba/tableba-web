@@ -4,7 +4,7 @@ module.exports = {
       colors: {
         background: "rgb(255,255,255)",
         text_primary: "rgb(15,15,15)",
-        accent_color: "rgb(245,245,245)",
+        accent_color: "rgb(235,235,235)",
         pastel_purple: "rgb(189,169,233)",
         pastel_blue: "rgb(59,50,255)",
         pastel_yellow: "rgb(255,255,137)",

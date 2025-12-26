@@ -30,7 +30,7 @@ function Blog() {
               blogFilesJson.map(blogFile => (
                 <div
                   key={blogFile.path}
-                  className="inline-block m-3 p-3 border border-text_primary md:hover:bg-accent_color md:hover:cursor-pointer md:active:bg-gray-200 transition duration-200"
+                  className="inline-block m-3 p-3 border border-text_primary md:hover:bg-accent_color md:hover:cursor-pointer active:bg-gray-300"
 
                   // redirect to the blog file when clicked
                   onClick={() => {window.location.href = `/${blogFile.path}`}}>
