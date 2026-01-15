@@ -38,7 +38,7 @@ function Home() {
             </li>
             <li>
               <Link
-                to=""
+                to="/music"
                 className="link-opt hover:bg-accent_color active:bg-gray-200"
               >
                 MUSIC
