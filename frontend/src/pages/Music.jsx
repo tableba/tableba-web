@@ -48,6 +48,13 @@ function Music() {
                 <audio controls>
                   <source src={soundUrl} type={getMimeType(soundUrl)}/>
                 </audio>
+                  <a
+    href={soundUrl}
+    download
+    className="anchor block mt-2"
+  >
+    Download
+  </a>
               </div>
             ))
           }
