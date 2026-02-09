@@ -1,23 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/default_html.module.css'
+import MusicSection from '../components/MusicSection.jsx'
+
 
 function Music() {
 
   const MUSICPATH = "/music/sounds.json"
-  const [soundArray, setSoundArray] = useState([])
-
-  function getMimeType(filePath) {
-    const extension = filePath.split('.').pop().toLowerCase()
-    const mimeTypes = {
-      'mp3': 'audio/mpeg',
-      'ogg': 'audio/ogg',
-      'wav': 'audio/wav',
-      'aac': 'audio/aac',
-      'flac': 'audio/flac'
-    };
-    return mimeTypes[extension] || 'audio/mpeg'
-  }
+  const [loopsArray, setLoopsArray] = useState([])
+  const [musicArray, setMusicArray] = useState([])
+  const [miscArray, setMiscArray] = useState([])
 
   // fetch sounds.json
   useEffect(() => {
@@ -25,7 +17,30 @@ function Music() {
       try {
         const response = await fetch(MUSICPATH)
         const data = await response.json()
-        setSoundArray(data)
+
+        const loopsArrayTemp = []
+        const musicArrayTemp = []
+        const miscArrayTemp = []
+
+        // map to music type based on file name
+        data.forEach(soundUrl => {
+          const fileName = soundUrl.split("/")[2]
+
+          if (fileName.includes("GL")) {
+            loopsArrayTemp.push(soundUrl)
+          }
+          else if (fileName.includes("ML")) {
+            musicArrayTemp.push(soundUrl)
+          }
+          else {
+            miscArrayTemp.push(soundUrl)
+          }
+        });
+
+        setLoopsArray(loopsArrayTemp)
+        setMusicArray(musicArrayTemp)
+        setMiscArray(miscArrayTemp)
+
       } catch (err) {
         console.error(`Fetch error: ${err}`)
       }
@@ -41,25 +56,13 @@ function Music() {
           This is a snippet of the music I make. If you like any of the sounds and want to work with me, feel free to <a className="anchor" href="/contact.html">contact me</a>
         </p>
         <div className="" id="sound-div">
-          {
-            soundArray.map(soundUrl => (
-              <div className="inline-block w-fit m-3 p-3 border border-text-primary">
-                <h4 className="italic mb-1 font-bold">{soundUrl.split("/")[2].split(".")[0]}</h4>
-                <audio controls>
-                  <source src={soundUrl} type={getMimeType(soundUrl)}/>
-                </audio>
-                  <a
-    href={soundUrl}
-    download
-    className="anchor block mt-2"
-  >
-    Download
-  </a>
-              </div>
-            ))
-          }
+          <MusicSection title="Loops" sounds={loopsArray} />
+          <MusicSection title="Music" sounds={musicArray} />
+          <MusicSection title="Misc" sounds={miscArray} />
+
         </div>
       </main>
+
 
       <footer>
         <hr className="text-darkgray mb-2 mt-2" />
