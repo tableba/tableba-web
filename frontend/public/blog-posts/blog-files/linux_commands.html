@@ -79,37 +79,35 @@
         </li>
 
         <li>YT-DLP
-          <li>MUSIC
+          <ul>
+            
+            <li>MUSIC
 
-            <ul>
-              <li>
-                Copy playlist with little metadata (only cover picture)
-                <br>
-                <strong><pre>yt-dlp -x -f bestaudio \
---audio-format mp3 \
---audio-quality 0 \
---embed-thumbnail \
---postprocessor-args "-map_metadata -1" \
-PLAYLIST_URL </pre></strong>
-              </li>
-            </ul>
-          </li>
+              <ul>
+                <li>
+                  Copy playlist with little metadata (only cover picture)
+                  <br>
+                  <strong><pre>yt-dlp -x -f bestaudio \
+  --audio-format mp3 \
+  --audio-quality 0 \
+  --embed-thumbnail \
+  --postprocessor-args "-map_metadata -1" \
+  PLAYLIST_URL </pre></strong>
+                </li>
+              </ul>
+            </li>
 
-          <li>VIDEO
-            <ul>
-              <li>
-                Copy playlist with best quality
-                <br>
-                <strong><pre>yt-dlp \
--f "bv*+ba/b" \
---merge-output-format mp4 \
---embed-thumbnail \
---add-metadata \
-PLAYLIST_URL </pre></strong>
-          </li>
-            </ul>
-          </li>
+            <li>VIDEO
+              <ul>
+                <li>
+                  Copy playlist with best quality
+                  <br>
+                  <strong><pre>yt-dlp -f "bv*+ba/b" PLAYLIST_URL</pre></strong>
+            </li>
+              </ul>
+            </li>
 
+          </ul>
         </li>
 
       </ul>
