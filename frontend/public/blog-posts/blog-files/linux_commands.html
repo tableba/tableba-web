@@ -85,7 +85,7 @@
 
               <ul>
                 <li>
-                  Copy playlist with little metadata (only cover picture)
+                  playlist with little metadata (only cover picture)
                   <br>
                   <strong><pre>yt-dlp -x -f bestaudio \
   --audio-format mp3 \
@@ -94,18 +94,37 @@
   --postprocessor-args "-map_metadata -1" \
   PLAYLIST_URL </pre></strong>
                 </li>
+
+            <li>
+                  individual audio with little metadata
+                  <br>
+                  <strong><pre>
+yt-dlp -x -f bestaudio \
+  --audio-format mp3 \
+  --audio-quality 0 \
+  --no-embed-thumbnail \
+  --no-write-info-json \
+  --no-write-description \
+  --no-write-comments \
+  --no-write-thumbnail \
+  --no-write-subs \
+  --no-write-auto-subs \
+  --parse-metadata "title:%(title)s" \
+  --postprocessor-args "-map_metadata -1" \
+  -o "%(title)s.%(ext)s" \
+</pre></strong>
+          </li>
               </ul>
             </li>
 
             <li>VIDEO
               <ul>
                 <li>
-                  Copy playlist with best quality
+                  playlist with best quality
                   <br>
                   <strong><pre>yt-dlp -f "bv*+ba/b" PLAYLIST_URL</pre></strong>
             </li>
-              </ul>
-            </li>
+
 
           </ul>
         </li>
