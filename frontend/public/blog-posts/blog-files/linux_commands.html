@@ -85,14 +85,20 @@
 
               <ul>
                 <li>
-                  playlist with little metadata (only cover picture)
+                  lots of metadata
                   <br>
                   <strong><pre>yt-dlp -x -f bestaudio \
-  --audio-format mp3 \
-  --audio-quality 0 \
-  --embed-thumbnail \
-  --postprocessor-args "-map_metadata -1" \
-  PLAYLIST_URL </pre></strong>
+--audio-format mp3 \
+--audio-quality 0 \
+--embed-thumbnail \
+--convert-thumbnails jpg \
+--add-metadata \
+--parse-metadata \
+"%(playlist_title)s:%(album)s" \
+--parse-metadata "%(playlist_uploader)s:%(album_artist)s" \
+--postprocessor-args "ffmpeg:-id3v2_version 3" \
+-o "%(playlist_title)s/%(playlist_index)02d - %(title)s.%(ext)s" \
+PLAYLIST_URL </pre></strong>
                 </li>
 
             <li>
