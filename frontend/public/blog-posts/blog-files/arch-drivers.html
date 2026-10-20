@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="How to install rtl8812au driver and nvidia driver on Arch Linux">
+    <meta name="summary" content="This blog post covers how to install the rtl8812au driver and nvidia driver on Arch Linux using yay.">
+    <title>drivers</title>
+    <style>
+    pre {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 4px;
+    font-size: 15px;
+    background-color: rgb(230, 230, 230);
+    white-space: pre-wrap;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>How to install rtl8812au driver and nvidia driver on Arch Linux</h1>
+      <summary>This blog post covers how to install the rtl8812au driver and nvidia driver on Arch Linux using yay.</summary>
+    </header>
+    <hr>
+    <main>
+      <h2>Install rtl8812au driver</h2>
+      <ul>
+        <li>
+          Install using yay:
+          <br>
+          <strong><pre>yay -S rtl8812au-dkms-git</pre></strong>
+        </li>
+        <li>Unplug and replug the adapter</li>
+        <li>
+          Check network interfaces:
+          <br>
+          <strong><pre>ip link</pre></strong>
+        </li>
+        <li>
+          If the interface shows up as "down" do:
+          <br>
+          <strong><pre>ip link set [interface name] up</pre></strong>
+        </li>
+      </ul>
+
+      <h2>Install nvidia driver</h2>
+      <ul>
+        <li>
+          Look on <a href="https://wiki.archlinux.org/title/NVIDIA">archlinux nvidia documentation</a>
+        </li>
+        <li>
+          Install driver using yay:
+          <br>
+          <strong><pre>yay -S nvidia</pre></strong>
+        </li>
+      </ul>
+    </main>
+    <div id="buttons"></div>
+  </body>
+</html>

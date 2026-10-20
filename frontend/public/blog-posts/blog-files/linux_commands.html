@@ -33,9 +33,9 @@
       <summary>This is a non-exhaustive list of handy commands in linux and vim.
         These are based of an <a href="https://archlinux.org/">Arch Linux</a> user, if you are using another distrubution some of the commands might not work.</summary>
     </header>
-
+    <hr>
     <main>
-      <h1>General commands</h1>
+      <h2>General commands</h2>
       <ul>
         <li>Search for the fastest mirror and append them to <pre>/etc/pacman.d/mirrorlist</pre> (mirrorlist)
           <br>
@@ -52,7 +52,6 @@
           <strong><pre>sudo freshclam</pre></strong> updates the virus definitions
           <br>
           <strong><pre>clamscan -r /path/to/folder</pre></strong> scans the directory
-          <br>
         </li>
         <li>Extract a tarball
           <br>
@@ -80,9 +79,7 @@
 
         <li>YT-DLP
           <ul>
-            
             <li>MUSIC
-
               <ul>
                 <li>
                   lots of metadata
@@ -98,14 +95,13 @@
 --parse-metadata "%(playlist_uploader)s:%(album_artist)s" \
 --postprocessor-args "ffmpeg:-id3v2_version 3" \
 -o "%(playlist_title)s/%(playlist_index)02d - %(title)s.%(ext)s" \
-PLAYLIST_URL </pre></strong>
+PLAYLIST_URL</pre></strong>
                 </li>
 
-            <li>
+                <li>
                   individual audio with little metadata
                   <br>
-                  <strong><pre>
-yt-dlp -x -f bestaudio \
+                  <strong><pre>yt-dlp -x -f bestaudio \
   --audio-format mp3 \
   --audio-quality 0 \
   --no-embed-thumbnail \
@@ -117,9 +113,8 @@ yt-dlp -x -f bestaudio \
   --no-write-auto-subs \
   --parse-metadata "title:%(title)s" \
   --postprocessor-args "-map_metadata -1" \
-  -o "%(title)s.%(ext)s" \
-</pre></strong>
-          </li>
+  -o "%(title)s.%(ext)s"</pre></strong>
+                </li>
               </ul>
             </li>
 
@@ -129,15 +124,14 @@ yt-dlp -x -f bestaudio \
                   playlist with best quality
                   <br>
                   <strong><pre>yt-dlp -f "bv*+ba/b" PLAYLIST_URL</pre></strong>
+                </li>
+              </ul>
             </li>
-
-
           </ul>
         </li>
-
       </ul>
 
-      <h1>Vim commands</h1>
+      <h2>Vim commands</h2>
       <ul>
         <li>Delete from the cursor until the end of the line
           <br>
@@ -154,9 +148,9 @@ yt-dlp -x -f bestaudio \
         <li>Open file browser
           <br>
           <strong><pre>:Ex</pre></strong></li>
-        </ul>
+      </ul>
     </main>
-<a style="color: #e0e0e0;" href="https://music.youtube.com/channel/UC1OniCaJ57y8XIKY9OlCPlA?si=ytczzPBk_4pHTcHd">milly</a>
-
+    <a style="color: #e0e0e0;" href="https://music.youtube.com/channel/UC1OniCaJ57y8XIKY9OlCPlA?si=ytczzPBk_4pHTcHd">milly</a>
+    <div id="buttons"></div>
   </body>
 </html>

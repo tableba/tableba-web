@@ -1,4 +1,5 @@
-<!DOCTYPE html> <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,87 +7,96 @@
     <meta name="summary" content="list of github commands & guide on how to authentificate to github through ssh">
     <title>Add ssh to github</title>
     <style>
-
     pre {
     display: inline-block;
-    margin: 1px;
+    margin: 3px;
     padding: 3px 4px;
     font-size: 15px;
     background-color: rgb(230, 230, 230);
     white-space: pre-wrap;
     }
-    code {
-    display: inline-block;
-    margin: 0px;
-    padding: 1px 4px;
-    font-size: 14px;
-    background-color: rgb(240, 240, 240);
-    }
-    li {
-    margin: 20px 0px;
-    }
-
     </style>
   </head>
   <body>
+    <header>
+      <h1>Github cheat sheet</h1>
+      <summary>list of github commands & guide on how to authentificate to github through ssh</summary>
+    </header>
+    <hr>
     <main>
-
-          <h2>Misc git commands</h2>
-          <ul>
-            <li>
-              Undo the last commit without losing changes:
-              <strong><pre>git reset --soft HEAD~1</pre></strong>
-            </li>
-            <li>
-              See what changed in any commit:
-              <strong><pre>git show &lt;commit-hash&gt;</pre></strong>
-            </li>
-            <li>
-              Clean untracked files safely (dry run first):
-              <strong><pre>git clean -n</pre></strong>
-              Actually delete:
-              <strong><pre>git clean -f</pre></strong>
-            </li>
-            <li>
-              Restore a deleted file from last commit:
-              <strong><pre>git restore &lt;filename&gt;</pre></strong>
-            </li>
-            <li>
-              List files changed in a branch compared to main:
-              <strong><pre>git diff --name-only main..your-branch</pre></strong>
-            </li>
-            <li>Add a submodule when cloning a github repository
-              <strong><pre>git submodule upadte --init --recursive</pre></strong>
-            </li>
-          </ul>
-
-      <h1>Generating a new SSH key</h1>
+      <h2>Misc git commands</h2>
       <ul>
         <li>
-          <h2>Generating a new SSH key</h2>
-          <p>If your system is relatively recent:</p>
+          Undo the last commit without losing changes:
+          <br>
+          <strong><pre>git reset --soft HEAD~1</pre></strong>
+        </li>
+        <li>
+          See what changed in any commit:
+          <br>
+          <strong><pre>git show &lt;commit-hash&gt;</pre></strong>
+        </li>
+        <li>
+          Clean untracked files safely (dry run first):
+          <br>
+          <strong><pre>git clean -n</pre></strong>
+          <br>
+          Actually delete:
+          <br>
+          <strong><pre>git clean -f</pre></strong>
+        </li>
+        <li>
+          Restore a deleted file from last commit:
+          <br>
+          <strong><pre>git restore &lt;filename&gt;</pre></strong>
+        </li>
+        <li>
+          List files changed in a branch compared to main:
+          <br>
+          <strong><pre>git diff --name-only main..your-branch</pre></strong>
+        </li>
+        <li>
+          Add a submodule when cloning a github repository:
+          <br>
+          <strong><pre>git submodule upadte --init --recursive</pre></strong>
+        </li>
+      </ul>
+
+      <h2>Generating a new SSH key</h2>
+      <ul>
+        <li>
+          If your system is relatively recent:
+          <br>
           <strong><pre>ssh-keygen -t ed25519 -C "your_email@example.com"</pre></strong>
         </li>
+      </ul>
 
+      <h2>Adding SSH key to SSH agent</h2>
+      <ul>
         <li>
-          <h2>Adding SSH key to SSH agent</h2>
-          <p>Start the agent:</p>
+          Start the agent:
+          <br>
           <strong><pre>eval "$(ssh-agent -s)"</pre></strong>
-          <p>Add you key:</p>
+        </li>
+        <li>
+          Add you key:
+          <br>
           <strong><pre>ssh-add ~/.ssh/id_ed25519</pre></strong>
         </li>
-        
+      </ul>
+
+      <h2>Adding SSH key to GitHub</h2>
+      <ul>
         <li>
-          <h2>Adding SSH key to GitHub</h2>
-          <p>print the public key (copy it to your clipboard)</p>
+          print the public key (copy it to your clipboard):
+          <br>
           <strong><pre>cat ~/.ssh/id_ed25519.pub</pre></strong>
-          <p>Go to <a href="https://github.com/settings/keys">GitHub > Settings > Keys</a>. Then <u>New SSH key > Paste your public key</u> </p>
         </li>
-
-
+        <li>
+          Go to <a href="https://github.com/settings/keys">GitHub > Settings > Keys</a>. Then <u>New SSH key > Paste your public key</u>
+        </li>
       </ul>
     </main>
-
+    <div id="buttons"></div>
   </body>
 </html>
-
